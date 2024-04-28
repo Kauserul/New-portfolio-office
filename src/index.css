@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.auto-scroll {
+  animation: scroll 10s linear infinite; /* Adjust animation duration as needed */
+}
+
+
+.logo {
+  overflow: hidden;
+  /* padding: 24px 0px; */
+  /* white-space: nowrap; */
+  /* display: flex; */
+}
+
+.logo-slider {
+  display: flex;
+  animation: 8s slider infinite linear;
+  gap: 30px;
+}
+
+.logo-slider img {
+  width: 317px;
+  height: 356px;
+  /* margin: 0px 40px; */
+}
+
+@keyframes slider {
+  from {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+.user-icon{
+  position: relative;
+}
+
+.user-info{
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+@media screen and (max-width: 556px) {
+  .logo-slider img {
+    width: 200px;
+    height: 200px;
+    /* margin: 0px 40px; */
+  }
+}
